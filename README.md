@@ -14,4 +14,4 @@ where `1` and `3` are assigned to the two attributes of the class `R` and `I`, w
 
 The class `Complex` has five methods, four of which overload the operators ![equation](https://latex.codecogs.com/gif.latex?&plus;%2C-%2C*%2C/) and the fifth one `.mod()` returns the module of the complex number.
 
-You can find a working example of the library usage in the python script **example_complex.py**.
+You can find a working example of the library usage in the python script **example_complex.py**. The syntax is compatible with [Python3](https://www.python.org/downloads/).
