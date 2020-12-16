@@ -9,7 +9,7 @@ class Complex(object):
         '''
         Overloads the operator + to perform the sum of two complex numbers.
          
-        Given two complex numbers 
+        Given two complex numbers ('i' being the Imaginary unit)
             a = real_a + i im_a
             b = real_b + i im_b
            
@@ -26,7 +26,7 @@ class Complex(object):
         '''
         Overloads the operator - to compute the difference between two complex numbers.
          
-        Given two complex numbers 
+        Given two complex numbers ('i' being the Imaginary unit)
             a = real_a + i im_a
             b = real_b + i im_b
            
@@ -43,7 +43,7 @@ class Complex(object):
         '''
         Overloads the operator * to perform the multiplication between two complex numbers.
          
-        Given two complex numbers 
+        Given two complex numbers ('i' being the Imaginary unit)
             a = real_a + i im_a
             b = real_b + i im_b
            
@@ -60,7 +60,7 @@ class Complex(object):
         '''
         Overloads the operator / to perform the division between two complex numbers.
          
-        Given two complex numbers 
+        Given two complex numbers ('i' being the Imaginary unit)
             a = real_a + i im_a
             b = real_b + i im_b
            
@@ -77,7 +77,10 @@ class Complex(object):
         
     def mod(self):
         '''
-        Computes the module |a| of the complex number a = real_a + i im_a as
+        Computes the module |a| of the complex number 
+            a = real_a + i im_a ('i' being the Imaginary unit) 
+        as
+        
             |a| = sqrt( real_a*real_a + im_a*im_a )
         '''
         return math.sqrt(self.R*self.R + self.I*self.I)
