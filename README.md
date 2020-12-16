@@ -12,6 +12,6 @@ z = C.Complex(1.,3.)
 
 where `1.` and `3.` are assigned to the two attributes of the class `R` and `I` which respectively corresponds to the real and the imaginary part of the resulting number.
 
-The class `Complex` has 5 methods, four of which overload the operators <img src="https://latex.codecogs.com/gif.latex?+,-,*,\/" /> and the fifth one `.mod()` allows returns the module of the complex number.
+The class `Complex` has 5 methods, four of which overload the operators <img src="https://latex.codecogs.com/gif.latex?+,-,*,/" /> and the fifth one `.mod()` allows returns the module of the complex number.
 
 You can find a functioning example of the library in the python script **example_complex.py**.
