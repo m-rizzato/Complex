@@ -3,7 +3,7 @@ Implementation of the complex number class containing the most important methods
 
 The library **complex.py** contains the definition for the complex number class `Complex`. The file **test_complex.py** contains the tests for the methods of the class `Complex` which can be run with [pytest] (https://docs.pytest.org/en/stable/).
 
-A single complex number is an instance of the class `Complex`. For example, <img src="https://latex.codecogs.com/gif.latex?z=1.+\text{i}3." /> can be created as 
+A single complex number is an instance of the class `Complex`. For example, ![equation](https://latex.codecogs.com/gif.latex?z%20%3D%201.%20&plus;%20%5Cmathrm%7Bi%7D3) can be created as 
 
 ```
 import complex as C
