@@ -77,7 +77,7 @@ class Complex(object):
         
     def mod(self):
         '''
-        Computes the module of the complex number a = real_a + i im_a as
+        Computes the module |a| of the complex number a = real_a + i im_a as
             |a| = sqrt( real_a*real_a + im_a*im_a )
         '''
         return math.sqrt(self.R*self.R + self.I*self.I)
