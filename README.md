@@ -1,5 +1,5 @@
 # Complex
-Implementation of the complex number class along with the most important complex number oprations. Respective tests for the methods are also provided.
+Implementation of the complex number class along with the most important complex number operations. Respective tests for the methods are also provided. 
 
 The library **complex.py** contains the definition of the complex number class `Complex`. The file **test_complex.py** contains the tests for the methods of the class `Complex` which can be run with [pytest](https://docs.pytest.org/en/stable/).
 
