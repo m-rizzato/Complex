@@ -11,8 +11,8 @@ The file **test_complex.py** contains the tests for the methods of the class `My
 A single complex number is an instance of the class `MyComplex`. For example, ![equation](https://latex.codecogs.com/gif.latex?z%20%3D%201%20&plus;%20%5Cmathrm%7Bi%7D3) can be created as 
 
 ```
-import complex as C
-z = C.Complex(1.,3.)
+from Complex import MyComplex
+z = MyComplex(1.,3.)
 ```
 
 where `1` and `3` are assigned to the two attributes of the class `Re` and `Im`, which respectively corresponds to the real and the imaginary part of the resulting number.
