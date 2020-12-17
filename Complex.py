@@ -1,7 +1,5 @@
 import math
 
-# test change
-
 class MyComplex(object):
 
     def __init__(self, real, imaginary):
