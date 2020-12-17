@@ -1,5 +1,6 @@
 from Complex import MyComplex
-from math import isclose 
+from math import isclose
+import pytest
 
 toll = 1e-6
 
@@ -33,19 +34,18 @@ def compare_complex(re, im, true_re, true_im):
     return True
 
 
-def test_sum():
-    c1 = a1+b1
-    assert compare_complex(c1.Re, c1.Im, 7., 1.)
-    c2 = a2+b2	
-    assert compare_complex(c2.Re, c2.Im, 3., -6.)
-    c3 = a3+b3
-    assert compare_complex(c3.Re, c3.Im, 1., 1.)
-    c4 = a4+b4
-    assert compare_complex(c4.Re, c4.Im, 0., 0.)
-    c5 = a5+b5
-    assert compare_complex(c5.Re, c5.Im, 4., 2.)
-    c6 = a6+b6
-    assert compare_complex(c6.Re, c6.Im, 25., -25.)
+@pytest.mark.parametrize(
+    "c, re, im", [
+        (a1 + b1, 7., 1.),
+        (a2 + b2, 3., -6.),
+        (a3 + b3, 1., 1.),
+        (a4 + b4, 0., 0.),
+        (a5 + b5, 4., 2.),
+        (a6 + b6, 25., -25.),
+    ]
+)
+def test_sum(c, re, im):
+    assert compare_complex(c.Re, c.Im, re, im)
 
 
 def test_sub():
