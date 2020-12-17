@@ -12,11 +12,11 @@ A single complex number is an instance of the class `MyComplex`. For example, ![
 
 ```
 from Complex import MyComplex
-z = MyComplex(1.,3.)
+z = MyComplex(1., 3.)
 ```
 
-where `1` and `3` are assigned to the two attributes of the class `Re` and `Im`, which respectively corresponds to the real and the imaginary part of the resulting number.
+where the values `1.` and `3.` are assigned to the two attributes of the class `Re` and `Im`, which respectively corresponds to the real and the imaginary part of the resulting number.
 
 The class `MyComplex` has five methods, four of which overload the operators ![equation](https://latex.codecogs.com/gif.latex?&plus;%2C-%2C*%2C/) and the fifth one `.mod()` returns the module of the complex number.
 
-You can find a working example of the library usage in the python script **example_complex.py**. The syntax is compatible with [Python3](https://www.python.org/downloads/).
+You can find a working example of the library usage in the python script **example_complex.py**.
