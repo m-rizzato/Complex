@@ -7,6 +7,8 @@ The library **complex.py** contains the definition of the complex number class `
 
 The file **test_complex.py** contains the tests for the methods of the class `MyComplex` which can be run with [pytest](https://docs.pytest.org/en/stable/). Tests are compatible with Python 3.5 at least.
 
+The file **example_complex.py.** provides a working example of the library.
+
 ## How to use this class
 A single complex number is an instance of the class `MyComplex`. For example, ![equation](https://latex.codecogs.com/gif.latex?z%20%3D%201%20&plus;%20%5Cmathrm%7Bi%7D3) can be created as 
 
@@ -19,4 +21,4 @@ where the values `1.` and `3.` are assigned to the two attributes of the class `
 
 The class `MyComplex` has five methods, four of which overload the operators ![equation](https://latex.codecogs.com/gif.latex?&plus;%2C-%2C*%2C/) and the fifth one `.mod()` returns the module of the complex number.
 
-You can find a working example of the library usage in the python script **example_complex.py**.
+You can find a working example of the library in the python script **example_complex.py**.
