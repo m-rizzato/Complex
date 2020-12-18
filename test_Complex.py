@@ -45,65 +45,66 @@ def compare_complex(re, im, true_re, true_im):
     ]
 )
 def test_sum(c, re, im):
-    assert compare_complex(c.Re, c.Im, re, im)
+    assert compare_complex(c.re, c.im, re, im)
 
 
-def test_sub():
-    c1 = a1-b1      
-    assert compare_complex(c1.Re, c1.Im, -3., 1.)
-    c2 = a2-b2
-    assert compare_complex(c2.Re, c2.Im, -7., 6.)
-    c3 = a3-b3
-    assert compare_complex(c3.Re, c3.Im, -1., 1.)
-    c4 = a4-b4
-    assert compare_complex(c4.Re, c4.Im, 10., 2.)
-    c5 = a5-b5
-    assert compare_complex(c5.Re, c5.Im, 0., 0.)
-    c6 = a6-b6
-    assert compare_complex(c6.Re, c6.Im, -5., 5.)
+@pytest.mark.parametrize(
+    "c, re, im", [
+        (a1 - b1, -3., 1.),
+        (a2 - b2, -7., 6.),
+        (a3 - b3, -1., 1.),
+        (a4 - b4, 10., 2.),
+        (a5 - b5, 0., 0.),
+        (a6 - b6, -5., 5.),
+    ]
+)
+def test_sub(c, re, im):
+    assert compare_complex(c.re, c.im, re, im)
 
 
-def test_prod():
-    c1 = a1*b1      
-    assert compare_complex(c1.Re, c1.Im, 10., 5.)
-    c2 = a2*b2
-    assert compare_complex(c2.Re, c2.Im, -10., 12.)
-    c3 = a3*b3
-    assert compare_complex(c3.Re, c3.Im, 0., 1.)
-    c4 = a4*b4
-    assert compare_complex(c4.Re, c4.Im, -24., -10.)
-    c5 = a5*b5
-    assert compare_complex(c5.Re, c5.Im, 3., 4.)
-    c6 = a6*b6
-    assert compare_complex(c6.Re, c6.Im, 0., -300.)
+@pytest.mark.parametrize(
+    "c, re, im", [
+        (a1 * b1, 10., 5.),
+        (a2 * b2, -10., 12.),
+        (a3 * b3, 0., 1.),
+        (a4 * b4, -24., -10.),
+        (a5 * b5, 3., 4.),
+        (a6 * b6, 0., -300.),
+    ]
+)
+def test_prod(c, re, im):
+    assert compare_complex(c.re, c.im, re, im)
 
 
-def test_divid():
-    c1 = a1/b1      
-    assert compare_complex(c1.Re, c1.Im, 0.4, 0.2)
-    c2 = a2/b2
-    assert compare_complex(c2.Re, c2.Im, -0.1639344262, -0.1967213114754098)
-    c3 = a3/b3
-    assert compare_complex(c3.Re, c3.Im, 0., 1.)
-    c4 = a4/b4
-    assert compare_complex(c4.Re, c4.Im, -1., 0.)
-    c5 = a5/b5
-    assert compare_complex(c5.Re, c5.Im, 1., 0.)
-    c6 = a6/b6
-    assert compare_complex(c6.Re, c6.Im, 0.6666666667, 0.)
+@pytest.mark.parametrize(
+    "c, re, im", [
+        (a1 / b1, 0.4, 0.2),
+        (a2 / b2, -0.1639344262, -0.1967213114754098),
+        (a3 / b3, 0., 1.),
+        (a4 / b4, -1., 0.),
+        (a5 / b5, 1., 0.),
+        (a6 / b6, 0.6666666667, 0.),
+    ]
+)
+def test_divid(c, re, im):
+    assert compare_complex(c.re, c.im, re, im)
 
 
-def test_mod():
-    assert isclose(a1.mod(), 2.236067977, rel_tol=toll)
-    assert isclose(a2.mod(), 2., rel_tol=toll)
-    assert isclose(a3.mod(), 1., rel_tol=toll)
-    assert isclose(a4.mod(), 5.099019514, rel_tol=toll)
-    assert isclose(a5.mod(), 2.236067977, rel_tol=toll)
-    assert isclose(a6.mod(), 14.14213562, rel_tol=toll)
-
-    assert isclose(b1.mod(), 5., rel_tol=toll)
-    assert isclose(b2.mod(), 7.810249676, rel_tol=toll)
-    assert isclose(b3.mod(), 1., rel_tol=toll)
-    assert isclose(b4.mod(), 5.09901951, rel_tol=toll)
-    assert isclose(b5.mod(), 2.236067977, rel_tol=toll)
-    assert isclose(b6.mod(), 21.21320344, rel_tol=toll)
+@pytest.mark.parametrize(
+    "mod, mod_exp", [
+        (a1.mod(), 2.236067977),
+        (a2.mod(), 2.),
+        (a3.mod(), 1.),
+        (a4.mod(), 5.0990195147),
+        (a5.mod(), 2.236067977),
+        (a6.mod(), 14.14213562),
+        (b1.mod(), 5.),
+        (b2.mod(), 7.810249676),
+        (b3.mod(), 1.),
+        (b4.mod(), 5.09901951),
+        (b5.mod(), 2.236067977),
+        (b6.mod(), 21.21320344),
+    ]
+)
+def test_mod(mod, mod_exp):
+    assert isclose(mod, mod_exp, rel_tol=toll)

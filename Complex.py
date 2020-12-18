@@ -1,11 +1,12 @@
 import math
 
+
 class MyComplex(object):
 
     def __init__(self, real, imaginary):
-        self.Re = real
-        self.Im = imaginary
-        
+        self.re = real
+        self.im = imaginary
+
     def __add__(self, no):
         """
         Overloads the operator + to perform the sum of two complex numbers.
@@ -21,7 +22,7 @@ class MyComplex(object):
             real_c = real_a + real_b
             im_c   = im_a + im_b
         """
-        return MyComplex(self.Re+no.Re, self.Im+no.Im)
+        return MyComplex(self.re+no.re, self.im+no.im)
         
     def __sub__(self, no):
         """
@@ -38,7 +39,7 @@ class MyComplex(object):
             real_c = real_a - real_b
             im_c   = im_a - im_b
         """
-        return MyComplex(self.Re-no.Re, self.Im-no.Im)
+        return MyComplex(self.re-no.re, self.im-no.im)
         
     def __mul__(self, no):
         """
@@ -55,7 +56,7 @@ class MyComplex(object):
             real_c = real_a*real_b - im_a*im_b
             im_c   = im_a*real_b + im_b*real_a
         """
-        return MyComplex(self.Re*no.Re-self.Im*no.Im, self.Im*no.Re + no.Im*self.Re)
+        return MyComplex(self.re*no.re-self.im*no.im, self.im*no.re + no.im*self.re)
 
     def __truediv__(self, no):
         """
@@ -72,8 +73,8 @@ class MyComplex(object):
             real_c = (real_a*real_b + im_a*im_b) / (real_a*real_a + im_a*im_a)
             im_c   = (im_a*real_b - real_a*im_b) / (real_a*real_a + im_a*im_a)
         """
-        result_re = (self.Re*no.Re+self.Im*no.Im) / (no.Re*no.Re + no.Im*no.Im)
-        result_im = (self.Im*no.Re-self.Re*no.Im) / (no.Re*no.Re + no.Im*no.Im)
+        result_re = (self.re*no.re+self.im*no.im) / (no.re*no.re + no.im*no.im)
+        result_im = (self.im*no.re-self.re*no.im) / (no.re*no.re + no.im*no.im)
         return MyComplex(result_re, result_im)
         
     def mod(self):
@@ -84,5 +85,4 @@ class MyComplex(object):
 
             |a| = sqrt( real_a*real_a + im_a*im_a )
         """
-        return math.sqrt(self.Re*self.Re + self.Im*self.Im)
-    
+        return math.sqrt(self.re*self.re + self.im*self.im)
