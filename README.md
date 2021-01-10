@@ -29,13 +29,13 @@ from math import pi
 z = MyComplex(r=5., theta=pi)
 ```
 
-The class `MyComplex` has six methods. Four of them overload the operators ![equation](https://latex.codecogs.com/gif.latex?&plus;%2C-%2C*%2C/), the fifth one `.mod()` returns the module of the complex number and the sixth provides an pictorial representation of the number in the complex plane. The **\*.png** files in this repository can be created as
+The class `MyComplex` has six methods. Four of them overload the operators ![equation](https://latex.codecogs.com/gif.latex?&plus;%2C-%2C*%2C/), the fifth one `.mod` returns the module of the complex number and the sixth one `.visualization` provides a pictorial representation of the number in the complex plane. The **\*.png** files in this repository are few example of possible visualisations. They can be created as
 ```
 from Complex import MyComplex
 z =  MyComplex(re=1., im=3.)
 filename = "number.png"
 z.visualization("single").savefig(filename)
 ```
-The non-optional argument passed to the method `visualization` helps optimising the final layout of the saved image, depending if it is meant to appear within a `single` column or in `double` column of a standard a4 page. In this first version of the library, the visualisation method relies on the assumption that the argument ![equation](https://latex.codecogs.com/gif.latex?%5Ctheta%20%5Cin%20%5Cleft%5B0%2C2%5Cpi%5Cright%5D). In different situation, the argument is added with multiples of the periodicity ![equation](https://latex.codecogs.com/gif.latex?2%5Cpi) to meet this condition.
+The non-optional argument passed to the method `.visualization` helps improving the final layout of the saved image. The desired image can then either be optimised for `single` column or `double` column. In this first version of the library, such visualisation method relies on the assumption that the argument ![equation](https://latex.codecogs.com/gif.latex?%5Ctheta%20%5Cin%20%5Cleft%5B0%2C2%5Cpi%5Cright%5D). For complex numbers not satisfying the above condition, their arguments are added with multiples of the periodicity ![equation](https://latex.codecogs.com/gif.latex?2%5Cpi) in order to meet this condition.
 
 You can find a working example of the library in the python script **example_complex.py**.
