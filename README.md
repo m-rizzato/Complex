@@ -9,14 +9,14 @@ The file **test_complex.py** contains the tests for the methods of the class `My
 
 The script **example_complex.py** provides a working example of the library.
 
-## How to install this class
+## How to install this library
 ```
 git clone https://github.com/m-rizzato/Complex.git
 cd Complex
 python setup.py install
 ```
 
-## How to use this class
+## How to use this library
 A single complex number is an instance of the class `MyComplex`. It can be defined either in terms of its Cartesian components (real and imaginary part) or by provding its polar coordinate (modulus and argument, in radiant). An example of the former is ![equation](https://latex.codecogs.com/gif.latex?z%20%3D%201%20&plus;%20%5Cmathrm%7Bi%7D3) which can be created as 
 ```
 from Complex import MyComplex
