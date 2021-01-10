@@ -17,7 +17,7 @@ python setup.py install
 ```
 
 ## How to use this library
-A single complex number is an instance of the class `MyComplex`. It can be defined either in terms of its Cartesian components (real and imaginary part) or by provding its polar coordinate (modulus and argument, in radiant). An example of the former is ![equation](https://latex.codecogs.com/gif.latex?z%20%3D%201%20&plus;%20%5Cmathrm%7Bi%7D3) which can be created as 
+A single complex number is an instance of the class `MyComplex`. It can be defined either in terms of its Cartesian components (real and imaginary parts) or by provding its polar coordinates (modulus and argument, in radiant). An example of the former is ![equation](https://latex.codecogs.com/gif.latex?z%20%3D%201%20&plus;%20%5Cmathrm%7Bi%7D3) which can be created as 
 ```
 from Complex import MyComplex
 z = MyComplex(re=1., im=3.)
@@ -25,7 +25,8 @@ z = MyComplex(re=1., im=3.)
 Instead, an example of the latter is ![equation](https://latex.codecogs.com/gif.latex?z%20%3D%205%20e%5E%7Bi%20%5Cpi%7D) which is created via
 ```
 from Complex import MyComplex
-z = MyComplex(r=5., theta=3.14)
+from math import pi
+z = MyComplex(r=5., theta=pi)
 ```
 
 The class `MyComplex` has six methods. Four of them overload the operators ![equation](https://latex.codecogs.com/gif.latex?&plus;%2C-%2C*%2C/), the fifth one `.mod()` returns the module of the complex number and the sixth provides an pictorial representation of the number in the complex plane. The **\*.png** files in this repository can be created as
