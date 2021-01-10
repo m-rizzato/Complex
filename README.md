@@ -28,6 +28,6 @@ z =  MyComplex(re=1., im=3.)
 filename = "number.png"
 z.visualization("single").savefig(filename)
 ```
-The non-optional argument to the method `visualization` refers to the final format of the saved image. The visualisation is then optimised for either `single` column or `double` in the page.
+The non-optional argument passed to the method `visualization` helps optimising the final layout of the saved image, depending if it is meant to appear within a `single` column or in `double` column of a standard a4 page.
 
 You can find a working example of the library in the python script **example_complex.py**.
