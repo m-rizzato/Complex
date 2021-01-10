@@ -5,7 +5,7 @@ Library implementing the notion of complex number along with the most important 
 
 The complex number class `MyComplex` is defined within the module **complex.py**, which is compatible with [Python3](https://www.python.org/downloads/).
 
-The file **test_complex.py** contains the tests for the methods of the class `MyComplex` which can be run with [pytest](https://docs.pytest.org/en/stable/). Tests are compatible with Python 3.5 at least.
+The file **test_complex.py** contains the tests for the methods of the class `MyComplex` and it can be run with [pytest](https://docs.pytest.org/en/stable/). Tests are compatible with Python 3.5 at least.
 
 The script **example_complex.py** provides a working example of the library.
 
