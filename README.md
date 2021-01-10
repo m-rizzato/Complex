@@ -21,6 +21,13 @@ from Complex import MyComplex
 z = MyComplex(r=5., theta=3.14)
 ```
 
-The class `MyComplex` has six methods. Four of them overload the operators ![equation](https://latex.codecogs.com/gif.latex?&plus;%2C-%2C*%2C/), the fifth one `.mod()` returns the module of the complex number and the sixth provides an pictorial representation of the number in the complex plane.
+The class `MyComplex` has six methods. Four of them overload the operators ![equation](https://latex.codecogs.com/gif.latex?&plus;%2C-%2C*%2C/), the fifth one `.mod()` returns the module of the complex number and the sixth provides an pictorial representation of the number in the complex plane. The **\*.png** files in this repository can be created as
+```
+from Complex import MyComplex
+z =  MyComplex(re=1., im=3.)
+filename = "number.png"
+z.visualization("single").savefig(filename)
+```
+The non-optional argument to the method `visualization` refers to the final format of the saved image. The visualisation is then optimised for either `single` column or `double` in the page.
 
 You can find a working example of the library in the python script **example_complex.py**.
