@@ -235,9 +235,12 @@ class MyComplex(object):
         fig = plt.figure(figsize=(cm2inch(width), cm2inch(width * ratio)))
         ax = fig.add_subplot(111, projection="polar")
         ax.set_rlabel_position(rlabel_angle)
+        if self.r == 0.0:
+            ax.set_ylim(0.0, 1.0)
         rlabels = ax.get_ymajorticklabels()
         for label in rlabels:
             label.set_color("red")
+
         ax.plot([0, angle], [0, self.r], marker="o")
 
         rads = np.arange(0, angle, 0.03)
