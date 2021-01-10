@@ -282,7 +282,7 @@ class MyComplex(object):
 
 
 def determine_quad(angle: float) -> Tuple[str, str, str, str, float]:
-    first_q = 0 < angle <= m.pi / 2.0
+    first_q = 0 <= angle <= m.pi / 2.0
     second_q = m.pi / 2.0 < angle <= m.pi
     third_q = m.pi < angle <= 3.0 * m.pi / 2.0
     fourth_q = 3.0 * m.pi / 2.0 < angle <= m.pi * 2.0
