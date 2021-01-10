@@ -10,15 +10,17 @@ The file **test_complex.py** contains the tests for the methods of the class `My
 The script **example_complex.py** provides a working example of the library.
 
 ## How to use this class
-A single complex number is an instance of the class `MyComplex`. For example, ![equation](https://latex.codecogs.com/gif.latex?z%20%3D%201%20&plus;%20%5Cmathrm%7Bi%7D3) can be created as 
-
+A single complex number is an instance of the class `MyComplex`. It can be defined either in terms of its Cartesian components (real and imaginary part) or by provding its polar coordinate (modulus and argument, in radiant). An example of the former is ![equation](https://latex.codecogs.com/gif.latex?z%20%3D%201%20&plus;%20%5Cmathrm%7Bi%7D3) which can be created as 
 ```
 from Complex import MyComplex
-z = MyComplex(1., 3.)
+z = MyComplex(re=1., im=3.)
+```
+Instead, an example of the latter is ![equation](https://latex.codecogs.com/gif.latex?z%20%3D%205%20e%5E%7Bi%20%5Cpi%7D) which is created via
+```
+from Complex import MyComplex
+z = MyComplex(r=5., theta=3.14)
 ```
 
-where the values `1.` and `3.` are assigned to the two attributes of the class `Re` and `Im`, which respectively corresponds to the real and the imaginary part of the resulting number.
-
-The class `MyComplex` has five methods, four of which overload the operators ![equation](https://latex.codecogs.com/gif.latex?&plus;%2C-%2C*%2C/) and the fifth one `.mod()` returns the module of the complex number.
+The class `MyComplex` has six methods. Four of them overload the operators ![equation](https://latex.codecogs.com/gif.latex?&plus;%2C-%2C*%2C/), the fifth one `.mod()` returns the module of the complex number and the sixth provides an pictorial representation of the number in the complex plane.
 
 You can find a working example of the library in the python script **example_complex.py**.
