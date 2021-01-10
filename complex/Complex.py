@@ -107,8 +107,6 @@ class MyComplex(object):
     @r.setter
     def r(self, value):
         self.__r = value
-        if self.__r == 0.0:
-            self.__theta = 0.0
         self.__re, self.__im = from_polar_to_cartesian(self.__r, self.__theta)
 
     # class members
