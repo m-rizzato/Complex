@@ -32,6 +32,7 @@ def from_cartesian_to_polar(x: float, y: float) -> Tuple[float, float]:
         else:
             angle = -m.acos(x / radius)
     else:
+        print("From cartesian to polar conversion: radius = 0, argument set to 0.")
         angle = 0.0
 
     return radius, angle
@@ -50,7 +51,7 @@ def from_polar_to_cartesian(radius: float, angle: float) -> Tuple[float, float]:
 
 class MyComplex(object):
     def __init__(
-            self, re: float = None, im: float = None, r: float = None, theta: float = None
+        self, re: float = None, im: float = None, r: float = None, theta: float = None
     ) -> None:
 
         is_cartesian = re is not None and im is not None
@@ -67,8 +68,6 @@ class MyComplex(object):
         elif is_polar and not is_cartesian:
             self.__r = r
             self.__theta = theta
-            if self.__r == 0.0:
-                self.__theta = 0.0
             self.__re, self.__im = from_polar_to_cartesian(r, theta)
 
         else:
@@ -193,10 +192,10 @@ class MyComplex(object):
             im_c   = (im_a*real_b - real_a*im_b) / (real_a*real_a + im_a*im_a)
         """
         result_re = (self.re * no.re + self.im * no.im) / (
-                no.re * no.re + no.im * no.im
+            no.re * no.re + no.im * no.im
         )
         result_im = (self.im * no.re - self.re * no.im) / (
-                no.re * no.re + no.im * no.im
+            no.re * no.re + no.im * no.im
         )
         return MyComplex(result_re, result_im)
 
