@@ -12,7 +12,7 @@ The script **example_complex.py** provides a working example of the library.
 ## How to install this class
 ```
 git clone https://github.com/m-rizzato/Complex.git
-cd complex
+cd Complex
 python setup.py install
 ```
 
