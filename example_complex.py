@@ -1,26 +1,37 @@
-from Complex import MyComplex
+from complex.Complex import MyComplex
+import math as m
 
 # creating two complex number
-a = MyComplex(2.0, 1.0)
-b = MyComplex(5.0, 0.0)
-print("The complex number 'a' has real and imaginary part (resp.): ", a.re, a.im)
-print("The complex number 'b' has real and imaginary part (resp.): ", b.re, b.im)
+a = MyComplex(re=2.0, im=1.0)
+b = MyComplex(r=5.0, theta=m.pi / 4.0)
+print("Informations for complex 'a':")
+print(a)
+print("\nInformations for complex 'b':")
+print(b)
 
 # we can determine their complex sum c = a+b via the overloaded operator '+'
 c = a + b
 # we print the result and verify that the resulting variable 'c' is indeed an instance of the class 'Complex'
-print("\nTheir sum 'c' has real and imaginary part (resp.): ", c.re, c.im)
-print("The variable 'c' has type: ", type(c))
-
+print("\nInformation on their sum:")
+print(c)
+print("\nSaving visualisation for c ...")
+c.visualization("single").savefig("./example_complex_output/sum.png")
 
 # similarly, we can compute other basic complex operations between the complex number 'a' and 'b'
 c = a - b
-print("\nTheir difference has real and imaginary part (resp.): ", c.re, c.im)
+print("\nInformation on their difference:")
+print(c)
+print("\nSaving visualisation for c ...")
+c.visualization("single").savefig("./example_complex_output/diff.png")
 
 c = a * b
-print("\nTheir product has real and imaginary part (resp.): ", c.re, c.im)
+print("\nInformation on their product:")
+print(c)
+c.visualization("single").savefig("./example_complex_output/prod.png")
 
 c = a / b
-print("\nTheir ratio has real and imaginary part (resp.): ", c.re, c.im)
+print("\nInformation on their ratio:")
+print(c)
+c.visualization("single").savefig("./example_complex_output/div.png")
 
-print("\nTheir respective modules are: ", a.mod(), b.mod())
+print(f"\nTheir respective modules are: {a.mod():.2f}, {b.mod():.2f}")
