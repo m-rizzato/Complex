@@ -36,6 +36,6 @@ z =  MyComplex(re=1., im=3.)
 filename = "number.png"
 z.visualization("single").savefig(filename)
 ```
-The non-optional argument passed to the method `.visualization` helps improving the final layout of the saved image. The desired image can then either be optimised for `single` column or `double` column. In this first version of the library, such visualisation method relies on the assumption that the argument ![equation](https://latex.codecogs.com/gif.latex?%5Ctheta%20%5Cin%20%5Cleft%5B0%2C2%5Cpi%5Cright%5D). For complex numbers not satisfying the above condition, their arguments are added with multiples of the periodicity ![equation](https://latex.codecogs.com/gif.latex?2%5Cpi) in order to meet this condition.
+The non-optional argument passed to the method `.visualization` helps improving the final layout of the saved image. It can either be optimised for placing the image in `single` column or in `double` column. In this first version of the library, such visualisation method relies on the assumption that the argument ![equation](https://latex.codecogs.com/gif.latex?%5Ctheta%20%5Cin%20%5Cleft%5B0%2C2%5Cpi%5Cright%5D). For complex numbers not satisfying the above condition, their arguments are added with multiples of the periodicity ![equation](https://latex.codecogs.com/gif.latex?2%5Cpi) in order to meet this condition.
 
 You can find a working example of the library in the python script **example_complex.py**.
