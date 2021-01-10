@@ -29,7 +29,7 @@ from math import pi
 z = MyComplex(r=5., theta=pi)
 ```
 
-The class `MyComplex` has six methods. Four of them overload the operators ![equation](https://latex.codecogs.com/gif.latex?&plus;%2C-%2C*%2C/), the fifth one `.mod` returns the module of the complex number and the sixth one `.visualization` provides a pictorial representation of the number in the complex plane. The **\*.png** files in this repository are few example of possible visualisations. They can be created as
+The class `MyComplex` has six methods. Four of them overload the operators ![equation](https://latex.codecogs.com/gif.latex?&plus;%2C-%2C*%2C/), the fifth one `.mod` returns the module of the complex number and the sixth one `.visualization` provides a pictorial representation of the number in the complex plane. The **\*.png** files in this repository are few examples of possible outcomes. They can be created as
 ```
 from Complex import MyComplex
 z =  MyComplex(re=1., im=3.)
