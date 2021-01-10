@@ -1,7 +1,7 @@
 # Complex
 
 ## Repository presentation
-Library implementing the notion of complex number along with the most important complex number operations. 
+This library implements the notion of complex number along with the most important complex number operations. 
 
 The complex number class `MyComplex` is defined within the module **complex.py**, which is compatible with [Python3](https://www.python.org/downloads/).
 
