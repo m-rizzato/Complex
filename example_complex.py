@@ -15,23 +15,23 @@ c = a + b
 print("\nInformation on their sum:")
 print(c)
 print("\nSaving visualisation for c ...")
-c.visualization("single").savefig("./example_complex_output/sum.png")
+c.visualization("single").savefig("sum.png")
 
 # similarly, we can compute other basic complex operations between the complex number 'a' and 'b'
 c = a - b
 print("\nInformation on their difference:")
 print(c)
 print("\nSaving visualisation for c ...")
-c.visualization("single").savefig("./example_complex_output/diff.png")
+c.visualization("single").savefig("diff.png")
 
 c = a * b
 print("\nInformation on their product:")
 print(c)
-c.visualization("single").savefig("./example_complex_output/prod.png")
+c.visualization("single").savefig("prod.png")
 
 c = a / b
 print("\nInformation on their ratio:")
 print(c)
-c.visualization("single").savefig("./example_complex_output/div.png")
+c.visualization("single").savefig("div.png")
 
 print(f"\nTheir respective modules are: {a.mod():.2f}, {b.mod():.2f}")
