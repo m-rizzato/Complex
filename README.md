@@ -11,7 +11,7 @@ The script **example_complex.py** provides a working example of the library.
 
 ## How to install this class
 ```
-git clone 
+git clone https://github.com/m-rizzato/Complex.git
 cd complex
 python setup.py install
 ```
