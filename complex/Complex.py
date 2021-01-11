@@ -268,7 +268,7 @@ class MyComplex(object):
             ),
         )
         ax.annotate(
-            f"$\Theta= {angle:.2f}$",
+            f"$\\Theta= {angle:.2f}$",
             xy=(angle * 0.5, self.r * 0.6),  # theta, radius
             color="red",
             ha=hat,
